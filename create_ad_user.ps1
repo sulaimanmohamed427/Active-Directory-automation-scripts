@@ -1,0 +1,2 @@
+Import-Module ActiveDirectory
+New-ADUser -Name "Test User" -SamAccountName "tuser" -UserPrincipalName "tuser@domain.com" -Path "OU=Users,DC=domain,DC=com" -AccountPassword (ConvertTo-SecureString "P@ssw0rd123" -AsPlainText -Force) -Enabled $true
